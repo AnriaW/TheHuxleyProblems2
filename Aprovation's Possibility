@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    float pro, alu, porc;
+    scanf("%f %f", &pro, &alu);
+
+    porc = (alu*100)/pro;
+    if(porc<20){
+        printf("%.2f", porc);
+        printf("%% 4.40%% Pessimo");
+    }
+
+    else if(porc>=20 && porc<40){
+        printf("%.2f", porc);
+        printf("%% 31.65%% Ruim");
+    }
+    else if(porc>=40 && porc<60){
+        printf("%.2f", porc);
+        printf("%% 56.82%% Bom");
+    }
+    else if(porc>=60 && porc<80){
+        printf("%.2f", porc);
+        printf("%% 80.00%% Muito Bom");
+    }
+    else{
+        printf("%.2f", porc);
+        printf("%% 94.00%% Excelente");
+    }
+	return 0;
+}
