@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+
+ int main(){
+
+    float vol, val, fin;
+    double price;
+    char comb;
+    
+    scanf("%f %c", &vol, &comb);
+
+
+    if (comb == 'G' || comb == 'g'){
+        val = 2.5;
+        if(vol<=20){
+            fin = val-(val*0.04);
+            price = vol*fin;
+        }
+        else{
+            fin = val-(val*0.06);
+            price = vol*fin;
+        }
+
+    }
+    else if(comb == 'A' || comb == 'a'){
+        val = 1.9;
+        if(vol<=20){
+            fin = val - (val*0.03);
+            price = vol*fin;
+        }
+        else{
+            fin = val -(val*0.05);
+            price = vol*fin;
+        }
+    }
+    else{
+        val = 1.66;
+        if(vol<25){
+            fin = 0;
+            price = vol*val;
+        }
+        else{
+            fin = val - (val*0.04);
+            price = vol*fin;
+        }
+    }
+
+    printf("R$ %.2lf", price);
+        return 0;
+ }
