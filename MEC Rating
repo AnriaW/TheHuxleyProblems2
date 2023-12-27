@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int alunos, livros;
+    
+    scanf("%d %d", &alunos, &livros);
+    
+    int conceito = livros/alunos;
+    
+    if(conceito<=8){
+        printf("A\n");
+    }
+    else if (conceito>8 && conceito<=12){
+        printf("B\n");
+    }
+    else if (conceito>12 && conceito<=18){
+        printf("C\n");
+    }
+     
+    else{
+        printf("D\n");
+    }
+    
+}
