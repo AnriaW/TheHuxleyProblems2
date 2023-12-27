@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    
+    float sal, per, aum;
+    int val;
+    
+    scanf("%f", &sal);
+    
+    if(sal<=280){
+        val = 20;
+        per = sal*0.2;
+        aum = sal+per;
+        
+    }
+    else if(sal>280 && sal<=700){
+        val = 15;
+        per = sal*0.15;
+        aum = sal+per;
+    }
+    else if(sal>700 && sal<1500){
+        val = 10;
+        per = sal*0.10;
+        aum = sal+per;
+    }
+    else{
+        val = 5;
+        per = sal*0.05;
+        aum = sal+per;
+    }
+    
+    printf("%.2f\n", sal);
+    printf("%d\n", val);
+    printf("%.2f\n", per);
+    printf("%.2f\n", aum);
+	return 0;
+}
