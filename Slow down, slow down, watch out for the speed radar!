@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    float max, real;
+    scanf("%f %f", &max, &real);
+
+    if (real <= max){
+        printf("0.00\n");
+        printf("0");
+        
+    }
+    else if (real>max && real<=1.2*max){
+        printf("85.13\n");
+        printf("4");
+    }
+    else if(real>1.2*max && real<=max*1.5){
+        printf("127.69\n");
+        printf("5");
+    }
+    else{
+        printf("574.62\n");
+        printf("7");
+    }
+	return 0;
+}
