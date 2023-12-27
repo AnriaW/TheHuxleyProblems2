@@ -1,0 +1,14 @@
+int main() {
+    float sal, emp, porc, max;
+    scanf("%f %f", &sal, &emp);
+    porc = sal*0.3;
+
+    if(emp>=porc){
+    printf("0.00");
+    }
+    else{
+        max = porc - emp;
+        printf("%.2f", max);
+    }
+	return 0;
+}
