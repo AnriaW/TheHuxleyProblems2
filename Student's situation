@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    float nota1, nota2, nota3;
+
+    scanf("%f %f %f", &nota1, &nota2, &nota3);
+
+    if(nota1>100||nota1<0||nota2>100||nota2<0||nota3>100||nota3<0){
+
+        printf("Media invalida");
+    }
+
+    else{
+        double media = (nota1+nota2+nota3)/3;
+
+        if (0<=media && media<=40){
+
+            printf("A media do aluno foi %.2lf", media);
+            printf(" e ele foi REPROVADO\n");     
+        }
+        else if (40<media && media<70){
+            printf("A media do aluno foi %.2lf", media);
+            printf(" e ele foi FINAL\n");
+        }
+        else{
+            printf("A media do aluno foi %.2lf", media);
+            printf(" e ele foi APROVADO\n");
+        }
+    }
+
+	return 0;
+}
