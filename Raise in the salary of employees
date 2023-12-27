@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    
+    float salary;
+    
+    scanf("%f", &salary);
+    
+    if (salary>=500){
+        printf("%.2lf\n", salary+(salary*0.1));
+    }
+    
+    else if (salary<500 && salary>=300){
+        printf("%.2lf\n", salary+(salary*0.07));
+    }
+    
+    else{
+       printf("%.2lf\n", salary+(salary*0.05));
+    }
+    
+	return 0;
+}
