@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    float a, b, c, teste, delta, raiz1, raiz2;
+    scanf("%f %f %f", &a, &b, &c);
+    teste = b*b - (4*c*a);
+    
+    if (a==0){
+        printf("NEESG");
+    }
+    else if (teste>=0){
+        delta = sqrt(b*b - (4*c*a));
+        raiz1 = ((-b)+delta)/(2*a);
+        raiz2 = ((-b)-delta)/(2*a);
+        
+        printf("%.2f\n", raiz1);
+        printf("%.2f\n", raiz2);
+    }
+    else{
+       printf("NRR");
+    }
+    
+	return 0;
+}
