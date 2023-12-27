@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    float code, qntd;
+    double price;
+
+    scanf("%f %f", &code, &qntd);
+
+    if(code == 1){
+        price = 5.30;
+    }
+    else if(code == 2){
+        price = 6.00;
+    }
+
+    else if (code == 3){
+        price = 3.20;
+    }
+    else{
+        price = 2.50;
+    }
+
+    double valor = price*qntd;
+    
+    if(qntd>=15 || valor>=40){
+        
+    double valorfinal = valor-(valor*0.15);
+    printf("R$ %.2lf\n", valorfinal);
+    
+    }
+    else{
+        printf("R$ %.2lf\n", valor);
+    }
+	return 0;
+}
